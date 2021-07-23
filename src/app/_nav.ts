@@ -12,7 +12,7 @@ export const navItems: INavData[] = [
   },
   {
     title: true,
-    name: 'Theme'
+    name: 'Fundos Imobiliarios'
   },
   {
     name: 'Colors',

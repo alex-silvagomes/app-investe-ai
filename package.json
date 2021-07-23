@@ -1,21 +1,21 @@
 {
-  "name": "@coreui/coreui-free-angular-admin-template",
-  "version": "2.9.5",
-  "description": "CoreUI Free Angular 2+ Admin Template",
+  "name": "app-investe-ai",
+  "version": "0.0.1",
+  "description": "App Investe Ai",
   "author": {
-    "name": "Łukasz Holeczek",
+    "name": "Alex Silva Gomes",
     "url": "http://holeczek.pl",
-    "github": "https://github.com/mrholek",
-    "twitter": "https://twitter.com/lukaszholeczek"
+    "github": "https://github.com/alex-silvagomes/app-investe-ai",
+    "twitter": "https://twitter.com/"
   },
   "contributors": [
     {
-      "name": "Andrzej Kopański",
-      "url": "https://github.com/xidedix"
+      "name": "Alex Silva Gomes",
+      "url": "https://github.com/alex-silvagomes/app-investe-ai"
     }
   ],
   "homepage": "https://coreui.io/angular",
-  "copyright": "Copyright 2020 creativeLabs Łukasz Holeczek",
+  "copyright": "Copyright 2021 ASG",
   "license": "MIT",
   "scripts": {
     "ng": "ng",

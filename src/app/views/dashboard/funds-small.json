@@ -1,0 +1,18 @@
+[
+    { 
+        "papel": "ABCP11", 
+        "segmento": "Shoppings", 
+        "cotacao": "75,75", 
+        "ffo_yield": "3,21%", 
+        "dividend_yield": "4,29%", 
+        "p_vp": "0,86", 
+        "valor_de_mercado": "924.440.000", 
+        "liquidez_diaria": "143.420", 
+        "qtde_imoveis": "1", 
+        "preco_por_m2": "12.984,70", 
+        "aluguel_por_m2": "603,35", 
+        "cap_rate": "4,65%", 
+        "vacancia_media": "12,00%"
+    }, 
+    {"papel": "AEFI11", "segmento": "Outros", "cotacao": "174,90", "ffo_yield": "6,20%", "dividend_yield": "0,00%", "p_vp": "1,16", "valor_de_mercado": "353.582.000", "liquidez_diaria": "0", "qtde_imoveis": "5", "preco_por_m2": "4.352,32", "aluguel_por_m2": "285,52", "cap_rate": "6,56%", "vacancia_media": "0,00%"}
+] 

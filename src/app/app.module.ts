@@ -58,7 +58,7 @@ import { ChartsModule } from 'ng2-charts';
   ],
   declarations: [
     AppComponent,
-    ...APP_CONTAINERS,
+    APP_CONTAINERS,
     P404Component,
     P500Component,
     LoginComponent,
