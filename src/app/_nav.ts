@@ -12,22 +12,37 @@ export const navItems: INavData[] = [
   },
   {
     title: true,
-    name: 'Fundos Imobiliarios'
+    name: 'Minha Carteira'
   },
   {
-    name: 'Colors',
-    url: '/theme/colors',
-    icon: 'icon-drop'
-  },
-  {
-    name: 'Typography',
-    url: '/theme/typography',
-    icon: 'icon-pencil'
+    name: 'Fundos Imobiliarios',
+    url: '/theme/funds',
+    icon: 'icon-briefcase'
   },
   {
     title: true,
-    name: 'Components'
+    name: 'Components',
   },
+
+
+  {
+    name: 'Desing UX',
+    url: '/desing',
+    icon: 'icon-cursor',
+    children: [
+      {
+        name: 'Colors',
+        url: '/theme/colors',
+        icon: 'icon-drop'
+      },
+      {
+        name: 'Typography',
+        url: '/theme/typography',
+        icon: 'icon-pencil'
+      }
+    ]
+  },   
+  
   {
     name: 'Base',
     url: '/base',

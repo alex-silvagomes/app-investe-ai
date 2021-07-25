@@ -1,9 +1,62 @@
 <div class="animated fadeIn">
+
+  <div class="row">    
+    <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Carteira de Fundos Imobiliarios
+        </div>
+        <div class="card-body">            
+          <table class="table">
+            <thead>
+              <tr>
+                <th>papel</th>
+                <th>segmento</th>
+                <th>cotacao</th>
+                <th>dividend_yield</th>                
+                <th>valor_de_mercado</th> 
+                <th>liquidez_diaria</th>               
+                <th>cap_rate</th>
+                <th>vacancia_media</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let fund of funds, let i = index">
+                <td>{{fund.papel}}</td>
+                <td>{{fund.segmento}}</td>
+                <td>{{fund.cotacao}}</td>              
+                <td>{{fund.dividend_yield}}</td>               
+                <td>{{fund.valor_de_mercado}}</td> 
+                <td>{{fund.liquidez_diaria}}</td>
+                <td>{{fund.cap_rate}}</td>
+                <td>{{fund.vacancia_media}}</td>
+                <td>
+                  <span class="badge badge-warning">Pending</span>
+                </td>
+              </tr>             
+            </tbody>
+          </table>
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </div>
+      </div>
+   
+  </div>  
+  <!--/.row-->
+
   <div class="row">
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          Carteira de Fundos Imobiliarios
+          Traffic &amp; Sales
         </div>
         <div class="card-body">
           <div class="row">
@@ -11,16 +64,16 @@
               <div class="row">
                 <div class="col-sm-6">
                   <div class="callout callout-info">
-                    <small class="text-muted">Quantidade total de Fundos Imobiliarios</small>
+                    <small class="text-muted">New Clients</small>
                     <br>
-                    <strong class="h4">{{ funds.length }}</strong>
+                    <strong class="h4">9,123</strong>
                   </div>
                 </div><!--/.col-->
                 <div class="col-sm-6">
                   <div class="callout callout-danger">
-                    <small class="text-muted">Minhas Cotas</small>
+                    <small class="text-muted">Recuring Clients</small>
                     <br>
-                    <strong class="h4">0</strong>
+                    <strong class="h4">22,643</strong>
                   </div>
                 </div><!--/.col-->
               </div><!--/.row-->
@@ -135,16 +188,16 @@
               <div class="row">
                 <div class="col-sm-6">
                   <div class="callout callout-warning">
-                    <small class="text-muted">Custo total</small>
+                    <small class="text-muted">Pageviews</small>
                     <br>
-                    <strong class="h4">R$ 1078,623</strong>
+                    <strong class="h4">78,623</strong>
                   </div>
                 </div><!--/.col-->
                 <div class="col-sm-6">
                   <div class="callout callout-success">
-                    <small class="text-muted">Rentabilidade prevista</small>
+                    <small class="text-muted">Organic</small>
                     <br>
-                    <strong class="h4">R$ 49,123</strong>
+                    <strong class="h4">49,123</strong>
                   </div>
                 </div><!--/.col-->
               </div><!--/.row-->
@@ -469,5 +522,5 @@
       </div>
     </div><!--/.col-->
   </div><!--/.row-->
-
+  
 </div>
