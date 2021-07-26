@@ -227,6 +227,11 @@ export const navItems: INavData[] = [
         icon: 'icon-star'
       },
       {
+        name: 'Funds',
+        url: '/funds',
+        icon: 'icon-briefcase'
+      },
+      {
         name: 'Error 404',
         url: '/404',
         icon: 'icon-star'
