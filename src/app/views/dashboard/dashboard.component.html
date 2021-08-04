@@ -20,7 +20,7 @@
                   <div class="callout callout-danger">
                     <small class="text-muted">Minhas Cotas</small>
                     <br>
-                    <strong class="h4">0</strong>
+                    <strong class="h4">{{ funds_owned.length }}</strong>
                   </div>
                 </div><!--/.col-->
               </div><!--/.row-->
@@ -131,20 +131,22 @@
                 </div>
               </div>
             </div><!--/.col-->
+                       
             <div class="col-sm-6">
               <div class="row">
                 <div class="col-sm-6">
                   <div class="callout callout-warning">
                     <small class="text-muted">Custo total</small>
                     <br>
-                    <strong class="h4">R$ 1078,623</strong>
+                    <strong class="h4">R$ {{ funds_custo_total }}</strong>
                   </div>
                 </div><!--/.col-->
                 <div class="col-sm-6">
                   <div class="callout callout-success">
                     <small class="text-muted">Rentabilidade prevista</small>
                     <br>
-                    <strong class="h4">R$ 49,123</strong>
+                    <strong class="h4">R$ {{ funds_rentabilidade_prevista }}</strong>
+                    
                   </div>
                 </div><!--/.col-->
               </div><!--/.row-->
@@ -469,5 +471,4 @@
       </div>
     </div><!--/.col-->
   </div><!--/.row-->
-
 </div>
