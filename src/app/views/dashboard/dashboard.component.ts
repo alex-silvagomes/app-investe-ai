@@ -12,25 +12,49 @@ export class DashboardComponent implements OnInit {
     
   // funds List
   funds: Array<any> = dataset;
+  fundsOwned: Array<any>;
+  fundsOwnedCost: number = 0;
+  fundsOwnedProfitabilityMonth: number = 0;
+  fundsOwnedProfitabilityYear: number = 0;
+  fundsOwnedCount: number = 0;
+
+  constructor( ) {
+    this.fundsOwned = this.filterFundsOwned();
+    this.fundsOwnedCount = this.countFundsOwned();
+    this.fundsOwnedCost = this.calcFundsOwnedCost();
+    this.fundsOwnedProfitabilityMonth = this.calcFundsOwnedProfitabilityMonth();
+    this.fundsOwnedProfitabilityYear = this.calcFundsOwnedProfitabilityYear();
+
+  }
   
-  funds_owned: Array<any> = this.funds.filter(function(fund) {
-    return fund.owned == true;
-  });
+  filterFundsOwned(): Array<any>  {
+    return this.funds.filter(fund => fund.owned);
+  }
 
-  funds_custo_total: number = 0;
-  // funds_rentabilidade_prevista: number = this.funds_owned.reduce((accumulator, current) => accumulator + (current.cotas+)), 0);
-  //funds_rentabilidade_prevista: number = this.funds_owned.reduce(function (acc, cur) { return acc + Number(cur.cotas); });
- 
+  calcFundsOwnedCost(): number  {
+    return this.fundsOwned.reduce((accumulator, current) => accumulator + (current.cotas * +current.cotacao), 0);
+  }
 
+  countFundsOwned(): number  {
+    return this.fundsOwned.reduce((accumulator, current) => accumulator + current.cotas, 0);
+  }
 
-  constructor( ) {}
+  calcFundsOwnedProfitabilityMonth(): number  {
+    return this.fundsOwned.reduce((accumulator, current) => accumulator + (current.dividend_yield_month * +current.cotas), 0);
+  }
+
+  calcFundsOwnedProfitabilityYear(): number  {
+    return this.fundsOwned.reduce((accumulator, current) => accumulator + (current.dividend_yield * current.cotas), 0);
+
+  }
 
   ngOnInit(): void {
     
     console.log("Load:", this.funds);
-    console.log("Minhas Cotas:", this.funds_owned);
-    console.log("Custo Total:", this.funds_custo_total);
-    // console.log("Rentabilidade Prevista:", this.funds_rentabilidade_prevista);
+    console.log("Minhas Cotas:", this.fundsOwned);
+    console.log("Custo Total:", this.fundsOwnedCost);
+    console.log("Rentabilidade Prevista (Mes):", this.fundsOwnedProfitabilityMonth);
+    console.log("Rentabilidade Prevista (Ano):", this.fundsOwnedProfitabilityYear);
 
   }
 }
